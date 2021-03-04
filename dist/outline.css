@@ -1,0 +1,83 @@
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ddd;
+  background-image: url(http://unsplash.it/900);
+  background-size: cover;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.content {
+  background: #fff;
+  width: 70vw;
+  padding: 3em;
+
+  outline: 10px solid red;
+  outline-offset: -20px;
+
+  /*! 2 same methods with using outline */
+
+  /*! 1: using border */
+  /* border: 25px solid rgba(0, 0, 0, 0.5);
+  background-clip: padding-box; */
+
+  /* ! 2: using box-shadow */
+  /* box-shadow: 0 0 0 150px rgba(0, 0, 0, 0.5); */
+}
+
+.title {
+  margin: 0 0 0.5em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 3rem;
+  color: #ee6352;
+  line-height: 0.8;
+}
+
+.box {
+  background: aquamarine;
+  padding: 2em;
+  width: 50%;
+
+  /*! great way to get a double border */
+  border: 5px solid black;
+  outline: 5px solid red;
+
+  /* with border, we can set border-bottom or border-top but outline-bottom doesn't work */
+}
+
+.btn {
+  text-decoration: none;
+
+  /* a tag default display is inline, so cannot set height, margin-top or margin-bottom for a tag
+  ==> reset display: inline-block */
+  display: inline-block;
+
+  background: #ee6352;
+  padding: 1em 3em;
+  color: #fff;
+
+  outline: 3px solid #ee6352;
+  transition: all ease-in-out 300ms;
+}
+
+.one:hover {
+  outline: 3px solid #ee6352;
+  outline-offset: 5px;
+}
+
+/* !trick to scale the size of button not using transform & scale */
+/* set outline-offset with negative value */
+/* outline-offset: -5px; */
+.two:hover {
+  outline: 3px solid #ee6352;
+  outline-offset: -5px;
+}

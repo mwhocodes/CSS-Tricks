@@ -1,0 +1,84 @@
+/* "margin: auto" just works with "display: flex" */
+:root {
+  --clr-primary: #ee6352;
+  --clr-body: #333;
+  --clr-bg: #ddd;
+}
+body {
+  font-family: sans-serif;
+  font-size: 1.125em;
+  color: var(--clr-body);
+
+  background: var(--clr-bg);
+  min-height: 100vh;
+}
+
+header {
+  padding: 2em;
+  background: #fff;
+  display: flex;
+
+  /* Vertical nav */
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  flex-direction: column;
+}
+
+.nav {
+  padding: 2px;
+  background: pink;
+  /* flex-basis: 100%;  equals to width: 100% or flex-grow: 1*/
+  flex-grow: 1;
+  /* "flex-grow: 1" means flex size can grow, if setting its value is 0, meaning that flex size can't grow */
+  /* "flex-shrink: 1" means flex size can shrink, if setting its value is 0, meaning that flex size can't grow */
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  background: lightblue;
+  gap: 1em;
+
+  /* Vertical nav */
+  flex-direction: column;
+  height: 100%;
+}
+
+.nav__list a {
+  color: var(--clr-primary);
+}
+
+.nav__list a:hover,
+.nav__list a:focus {
+  color: red;
+}
+
+.nav__list li:nth-of-type(1) {
+  background: yellow;
+  /* margin-left: auto; */
+
+  margin-top: auto;
+}
+
+.nav__list li:nth-of-type(6) {
+  background: teal;
+  /* margin-left: auto; */
+  /* put all of items which is from the selected item to left */
+
+  /* vertical nav */
+  margin-top: auto;
+  /* margin-bottom: auto; */
+}
+
+.nav__list li:nth-of-type(7) {
+  background: lightgreen;
+
+  /* margin-left: auto; */
+  /* put all that margin on the left side */
+
+  /* margin-bottom: auto; */
+}

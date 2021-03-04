@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+body {
+  font-family: sans-serif;
+  color: white;
+  font-size: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px;
+}
+
+h1 {
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+  font-family: 'Chewy', cursive;
+  font-size: 7.5rem;
+  margin: 0.25em;
+}
+
+/* ! the last rule always wins  */
+/* the color of body will be set pink */
+
+body {
+  color: blue;
+}
+
+body {
+  color: pink;
+}
+
+/* ! inline style > the rule order => the last rule always win, except for inline style*/
+body {
+  background: lightblue;
+}
+
+/*! class wins "div p" because it is more specific */
+.definition {
+  color: black;
+}
+
+/*! "div p" wins because it is being more specific than "p" */
+div p {
+  color: yellowgreen;
+}
+
+p {
+  color: green;
+}
+
+/*! id always wins class, cause you can have many different classes but with id, only 1 */
+#source {
+  color: yellow;
+}
+
+.source {
+  color: green;
+}
+
+/*! RULE: inline style > id > class, attributes, pseudo-classes > elements, pseudo-elements (counted in order, the last one always win) */
+/* Highly recommend using class
+try to avoid nesting your selector  */
+/* avoid using !important */
