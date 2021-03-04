@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary: #ee6352;
+  --clr-body: #333;
+  --clr-bg: #ddd;
+}
+
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: var(--clr-body);
+  background: var(--clr-bg);
+}
+
+.content {
+  background: #fff;
+  padding: 3em;
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
+
+  /*! 2 methods to give a box's maximum*/
+  /*! method 1 */
+  /* width of the content box is 70%, but maximum of that box is 600px. It means that the box can grow until reaching 600px */
+  /* width: 70%;
+  max-width: 600px; */
+
+  /*! method 2 */
+  /* inside parenthesis, there are 2 values
+  the values are not arrange in order,
+  it is counted which one is bigger or smaller*/
+  /* width: min(600px, 70%); */
+
+  /* width: max(400px, 50%, 50vh); */
+
+  /* you can also use math, but making sure that you write in the correct syntax
+  INCORRECT: 500px+20%
+  CORRECT: 500px + 20% */
+  /* width: min(500px + 20%, 600px); */
+
+  font-size: clamp(2rem, 5vw, 2rem);
+}
+
+p {
+  background: lightblue;
+  /* clamp(x,y,z) 
+  x: min size
+  y: ideal size
+  z: max size*/
+  width: clamp(200px, 50%, 50rem);
+
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
+}
+
+.title {
+  color: #ee6352;
+}

@@ -1,0 +1,51 @@
+body {
+  background: lightcoral;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 1.125em;
+  gap: 2rem;
+}
+
+.content {
+  display: flex;
+  margin: auto;
+  padding: 3rem;
+  background: whitesmoke;
+  gap: 2rem;
+}
+
+/*! 3 methods to make a shadow
+1: .box-shadow ==> just for jpg and box
+2: filter: drop-shadow() ==> useful for png & svg
+3: text-shadow ==> only for text */
+
+.box-shadow {
+  /* with box-shadow, it takes the current color for shadow's color as the default */
+  color: coral;
+  box-shadow: 0.75em 0.75em 1em;
+  /* box-shadow: h v b s c; 
+  h: horizontal axis
+  v: vertical axis 
+  b: blur
+  s: size of the shadow
+  c: color */
+}
+
+.filter-shadow {
+  filter: drop-shadow(20px 20px 5px coral);
+  /* filter: drop-shadow(h v b c); 
+  h: horizontal axis
+  v: vertical axis 
+  b: blur
+  c: color 
+  ! with drop-shadow, the value of shadow's size is not supported*/
+}
+
+.text {
+  font-weight: bolder;
+  font-size: 3em;
+  color: coral;
+
+  text-shadow: 20px 20px 5px blue;
+}

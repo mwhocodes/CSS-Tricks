@@ -1,0 +1,64 @@
+:root {
+  --clr-primary: #ee6352;
+  --clr-body: #333;
+  --clr-bg: #ddd;
+}
+
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  color: var(--clr-primary);
+}
+/*! BLOCK */
+/* most elements are blocks, one example of a block is p tag */
+/* block elements always stack on top of each other even if they have room to go next to one another, they force a new line of content automatically*/
+/* default of blocks have a width of 100% */
+
+/* if you set an outline for p tag, you can see we get these boxes that show up around paragraphs */
+p {
+  outline: 3px solid red;
+  /* Outline in this case is a nicer one to use instead of border
+  if you try to debug or do anything, you don't actually impact the layout of anything  */
+  width: 100%;
+  /* even though we set a width of 50% or 25%, there's still not in next to each other */
+}
+
+/*! INLINE */
+/* with an inline element, it's always going to be its own width and it's gonna make a box all the way around it */
+/* with an inline element, we cannot set height, margin-top, margin-bottom*/
+
+/* a tag element is inline */
+a {
+  outline: 3px solid orchid;
+  /* the boxes start where the link starts and they stop where the links end */
+
+  /* not working */
+  /* height: 200px; */
+  /* margin-top: 200px; */
+  /* margin-bottom: 200px; */
+
+  /* not working */
+
+  /* font-size: 50px; */
+}
+
+/*! INLINE-BLOCK */
+/* with inline-block, we can set margin, padding, height and it also allows the elements to not fore new lines */
+
+.btn {
+  display: inline-block;
+  background: lightblue;
+  color: black;
+  padding: 20px 50px;
+  text-decoration: none;
+  outline: unset;
+}
+
+.btn:hover {
+  background: darkcyan;
+  color: white;
+}
